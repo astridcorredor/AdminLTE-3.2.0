@@ -87,7 +87,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./registroestudiante.php" class="nav-link active">
+                <a href="RegistrarEstudiante.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Registrar Estudiantes</p>
                 </a>
@@ -99,7 +99,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="EstadisticaEstudiantes.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Estadística Estudiantes</p>
                 </a>
@@ -117,19 +117,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="RegistrarReporte.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Registrar Reportes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="ConsultarReportes.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Consulta Reportes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="EstadisticaReportes.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Estadística Reportes</p>
                 </a>

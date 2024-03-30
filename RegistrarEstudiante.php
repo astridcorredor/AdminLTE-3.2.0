@@ -41,6 +41,12 @@ require ('cabecera.php')
                       <input type="number" class="form-control" id="curso" placeholder="Curso del Estudiante">
                     </div>
                   </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Sede</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="sede" placeholder="Sede Educativa">
+                    </div>
+                  </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">

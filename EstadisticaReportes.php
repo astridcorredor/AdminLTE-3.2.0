@@ -10,7 +10,7 @@ require ('cabecera.php')
             <div class="card">
               <div class="card-header border-0">
                 <div class="d-flex justify-content-between">
-                  <h3 class="card-title">Online Store Visitors</h3>
+                  <h3 class="card-title">Estudiantes Sedes/Cursos</h3>
                   <a href="javascript:void(0);">View Report</a>
                 </div>
               </div>
@@ -18,13 +18,13 @@ require ('cabecera.php')
                 <div class="d-flex">
                   <p class="d-flex flex-column">
                     <span class="text-bold text-lg">820</span>
-                    <span>Visitors Over Time</span>
+                    <span>Estudiantes Curso/Edad</span>
                   </p>
                   <p class="ml-auto d-flex flex-column text-right">
                     <span class="text-success">
                       <i class="fas fa-arrow-up"></i> 12.5%
                     </span>
-                    <span class="text-muted">Since last week</span>
+                    <span class="text-muted">Ultimo año</span>
                   </p>
                 </div>
                 <!-- /.d-flex -->
