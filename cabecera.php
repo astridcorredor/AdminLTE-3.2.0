@@ -93,7 +93,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="ConsultarEstudiantes.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Consultar Estudiantes</p>
                 </a>
@@ -119,13 +119,13 @@
               <li class="nav-item">
                 <a href="./index.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Academico</p>
+                  <p>Registrar Reportes</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./index2.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Convivencia</p>
+                  <p>Consulta Reportes</p>
                 </a>
               </li>
               <li class="nav-item">
