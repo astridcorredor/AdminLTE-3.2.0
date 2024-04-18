@@ -5,16 +5,16 @@
 require("conexion.php");
 $conexion = retornarConexion();
 
-  $registros = mysqli_query($conexion, "select *  from estudiantes") or
+  $registros = mysqli_query($conexion, "select * from estudiantes") or
     die("Problemas en el select:" . mysqli_error($conexion));
 ?>
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
         <h1>Consultar Estudiantes</h1>
-        <a href="insertar.php"><button type="submit" class="btn btn-primary">Nuevo Registro</button></a>
+        <a href="RegistrarEstudiante.php"><button type="submit" class="btn btn-primary">Nuevo Registro</button></a>
         <br><br>
-        <table class="table table-hover table-striped table-bordered display" id="tablausu">
+        <table class="table table-hover table-striped table-bordered display" id="tablaestudiantes">
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -22,6 +22,9 @@ $conexion = retornarConexion();
                     <th>Identificación</th>
                     <th>Curso</th>
                     <th>Sede</th>
+                    <th>Acciones</th>
+                    <th>Acciones</th>
+                </tr>
             </thead>
   <tbody>
 <?php
@@ -42,10 +45,10 @@ $conexion = retornarConexion();
   mysqli_close($conexion);
   ?>
   </tbody>
-  </table>
+      </table>
   <script>
     $(document).ready( function () {
-    $('#tablausu').DataTable();
+    $('#tablaestudiantes').DataTable();
     } );
   </script>
     </div><!-- /.container-fluid -->

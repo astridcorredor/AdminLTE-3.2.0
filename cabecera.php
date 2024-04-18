@@ -25,6 +25,14 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <!-- DataTables CSS -->
+  <link href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  
+
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -93,7 +101,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="consulta.php" class="nav-link">
+                <a href="consultaEstudiante.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Consultar Estudiantes</p>
                 </a>
@@ -123,7 +131,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="ConsultarReportes.php" class="nav-link">
+                <a href="consultaReporte.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Consulta Reportes</p>
                 </a>

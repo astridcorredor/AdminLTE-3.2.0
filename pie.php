@@ -49,6 +49,11 @@
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- DataTables JS -->
+ <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+
 </body>
 </html>
 
