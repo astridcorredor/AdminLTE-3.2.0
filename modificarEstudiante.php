@@ -1,75 +1,76 @@
-
 <?php
-require ('cabecera.php');
-require ('conexion.php');
+  require ('cabecera.php');
+?> 
+<?php
+require("conexion.php");
 $conexion = retornarConexion();
-if($_POST){
-mysqli_query($conexion, "insert into estudiantes(nombre,apellido,identificacion,curso,sede) values
-                       ('$_REQUEST[nombre]','$_REQUEST[apellido]',$_REQUEST[identificacion],$_REQUEST[curso],'$_REQUEST[sede]')")
-                       //agrego NULL si no se diligencia el campo vg. codigo autoincrementado
-    or die("Problemas en el select" . mysqli_error($conexion));
+
+$registros = mysqli_query($conexion, "select codigo, nombre, apellido, identificacion, curso, sede from estudiantes where codigo='$_REQUEST[codigo]'") or
+die("Problemas en el select:" . mysqli_error($conexion));
  
-  mysqli_close($conexion);
-  //echo '<script type="text/javascript">; window.location.rel="noopener" target="_blank" href="consultaEstudiante.php";
-  //</script>';
- //header('Location:AdminLTE-3.2.0/AdminLTE-3.2.0/consultaEstudiante.php');
-echo 'Registro Exitoso!';
-}
 ?>
 
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <h1>Formulario Registro Estudiantes</h1>
+        <h1>Formulario para Modificación de Estudiantes</h1>
       </div><!-- /.container-fluid -->
       <div class="col-md-8">
             <!-- general form elements -->
             <!-- Horizontal Form -->
             <div class="card card-info">
               <div class="card-header">
-                <h3 class="card-title">Datos del Estudiante</h3>
+                <h3 class="card-title">Actualización de Datos del Estudiante</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form class="form-horizontal" action="" method="post">
+              <form class="form-horizontal" action="actualizarEstudiante.php" method="post">
+              <?php
+                if ($reg = mysqli_fetch_array($registros)) { ?>
                 <div class="card-body">
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Codigo</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="codigo" placeholder="Codigo del Estudiante" name="codigo" value="<?php echo $reg['codigo'] ; ?> ">
+                    </div>
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="nombre" placeholder="Nombres del Estudiante" name="nombre">
+                      <input type="text" class="form-control" id="nombre" placeholder="Nombres del Estudiante" name="nombre" value="<?php echo $reg['nombre'] ; ?> ">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Apellido</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="apellido" placeholder="Apellidos del Estudiante" name="apellido">
+                      <input type="text" class="form-control" id="apellido" placeholder="Apellidos del Estudiante" name="apellido" value="<?php echo $reg['apellido'] ; ?> ">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Identificacion</label>
                     <div class="col-sm-10">
-                      <input type="number" class="form-control" id="identificacion" placeholder="Número de identificación" name="identificacion">
+                      <input type="text" class="form-control" id="identificacion" placeholder="Número de identificación" name="identificacion" value="<?php echo $reg['identificacion'] ; ?> ">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Curso</label>
                     <div class="col-sm-10">
-                      <input type="number" class="form-control" id="curso" placeholder="Curso del Estudiante" name="curso">
+                      <input type="text" class="form-control" id="curso" placeholder="Curso del Estudiante" name="curso" value="<?php echo $reg['curso'] ; ?> ">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Sede</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="sede" placeholder="Sede Educativa" name="sede">
+                      <input type="text" class="form-control" id="sede" placeholder="Sede Educativa" name="sede" value="<?php echo $reg['sede'] ; ?> ">
                     </div>
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Registrar</button>
+                  <button type="submit" class="btn btn-primary">Actualizar</button>
                   <button type="submit" class="btn btn-default float-right">Cancel</button>
                 </div>
-                <!-- /.card-footer -->
+                                <!-- /.card-footer -->
+                <?php   }  ?>
               </form>
             </div>
             <!-- /.card -->
@@ -77,8 +78,7 @@ echo 'Registro Exitoso!';
           </div>
     </section>
     <!-- /.content -->
-  </div>
 
 <?php
-require ('pie.php')
-?>
+  require ('pie.php');
+?> 
